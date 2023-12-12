@@ -32,6 +32,9 @@ struct CGE_Sprite* cgeCreateSprite(int width, int height)
 	
 	cge.sprites[cge.numSprites-1] = sprite;
 	
+	memset(sprite->glyphs, PIXEL_SOLID, sizeof(short)*width*height);
+	memset(sprite->colors, FG_WHITE, sizeof(short)*width*height);
+	
 	return sprite;
 }
 
@@ -403,14 +406,15 @@ void cgeDrawSprite(int x, int y, struct CGE_Sprite *sprite)
 	if(sprite == NULL)
 		return;
 	
-	for(int i = 0; i < sprite->height*sprite->width; ++i)
+	for(int dy = 0; dy < sprite->height; ++dy)
 	{
-		int dx = i/sprite->width;
-		int dy = i%sprite->height;
-		
-		if(sprite->glyphs[i] == L'@')
-			continue;
-		Draw(x+dx, y+dy, sprite->colors[i], sprite->glyphs[i]);
+		for(int dx = 0; dx < sprite->width; ++dx)
+		{
+			
+			if(sprite->glyphs[dy*sprite->width+dx] == L'@')
+				continue;
+			Draw(x+dx, y+dy, sprite->colors[dy*sprite->width+dx], sprite->glyphs[dy*sprite->width+dx]);
+		}
 	}
 }
 

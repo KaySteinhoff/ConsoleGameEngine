@@ -14,7 +14,7 @@
 #include <time.h>
 
 #define FG_BLACK		0x0000
-#define FG_DARK_BLUE    0x0001	
+#define FG_DARK_BLUE    0x0001
 #define FG_DARK_GREEN   0x0002
 #define FG_DARK_CYAN    0x0003
 #define FG_DARK_RED     0x0004
