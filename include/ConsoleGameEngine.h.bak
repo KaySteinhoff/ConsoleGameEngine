@@ -119,35 +119,6 @@
 #define NUMPAD_ADD 107
 #define NUMPAD_SUBTRACT 109
 #define NUMPAD_DIVIDE 111
-#define F1 112
-#define F2 113
-#define F3 114
-#define F4 115
-#define F5 116
-#define F6 117
-#define F7 118
-#define F8 119
-#define F9 120
-#define F10 121
-#define F11 122
-#define F12 123
-#define NUMPAD 144
-#define LEFT_SHIFT 160
-#define RIGHT_SHIFT 161
-#define LEFT_CONTROL 162
-#define RIGHT_CONTROL 163
-#define LEFT_ALT 164
-#define RIGHT_ALT 165
-#define ISO_D11 186
-#define ISO_D12 187
-#define ISO_B08 188
-#define ISO_B10 189
-#define ISO_B09 190
-#define ISO_C12 191
-#define ISO_C10 192
-#define ISO_E00 220
-#define ISO_C11 222
-#define ISO_B00 226
 
 typedef struct _CONSOLE_FONT_INFOEX
 {
