@@ -327,7 +327,7 @@ void cgeDrawString(int x, int y, char *str, short color)
 	}
 }
 
-void Draw(int x, int y, short color, short pixelStatus)
+void cgeDraw(int x, int y, short color, short pixelStatus)
 {
 	if(x < 0 || x > cge.screenWidth || y < 0 || y > cge.screenHeight)
 		return;
