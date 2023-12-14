@@ -1,4 +1,5 @@
 echo off
+cls
 git add .
 set /p msg=Please enter your commit message:
 git commit -m "%msg%"
