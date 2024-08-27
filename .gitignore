@@ -1,2 +1,5 @@
 # Batch files (used to push/pull)
 *.bat
+*.dll
+*.a
+*.so
