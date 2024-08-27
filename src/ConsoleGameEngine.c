@@ -343,7 +343,7 @@ void DrawLineH(short pixelStatus, short color, int x, int y, int dx, int dy, int
 	else
 		{ x = x2; y = y2; xe = x1;}
 
-	Draw(x, y, pixelStatus, color);
+	cgeDraw(x, y, pixelStatus, color);
 	
 	for (int i = 0; x<xe; i++)
 	{
@@ -355,7 +355,7 @@ void DrawLineH(short pixelStatus, short color, int x, int y, int dx, int dy, int
 			if ((dx<0 && dy<0) || (dx>0 && dy>0)) y = y + 1; else y = y - 1;
 			px = px + 2 * (dy1 - dx1);
 		}
-		Draw(x, y, pixelStatus, color);
+		cgeDraw(x, y, pixelStatus, color);
 	}
 }
 
@@ -366,7 +366,7 @@ void DrawLineV(short pixelStatus, short color, int x, int y, int dx, int dy, int
 	else
 		{ x = x2; y = y2; ye = y1; }
 
-	Draw(x, y, pixelStatus, color);
+	cgeDraw(x, y, pixelStatus, color);
 
 	for (int i = 0; y<ye; i++)
 	{
@@ -378,7 +378,7 @@ void DrawLineV(short pixelStatus, short color, int x, int y, int dx, int dy, int
 			if ((dx<0 && dy<0) || (dx>0 && dy>0)) x = x + 1; else x = x - 1;
 			py = py + 2 * (dx1 - dy1);
 		}
-		Draw(x, y, pixelStatus, color);
+		cgeDraw(x, y, pixelStatus, color);
 	}
 }
 
@@ -413,7 +413,7 @@ void cgeDrawSprite(int x, int y, struct CGE_Sprite *sprite)
 			
 			if(sprite->glyphs[dy*sprite->width+dx] == L'@')
 				continue;
-			Draw(x+dx, y+dy, sprite->colors[dy*sprite->width+dx], sprite->glyphs[dy*sprite->width+dx]);
+			cgeDraw(x+dx, y+dy, sprite->colors[dy*sprite->width+dx], sprite->glyphs[dy*sprite->width+dx]);
 		}
 	}
 }
